@@ -7,8 +7,15 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index(){
-        $posts = Post::with('tags')->withCount('comments')->get();
+    public function index(Request $request){
+        $tagName = $request->query('tag');
+
+        if ($tagName) {
+            $posts = Post::whereHas('tags', fn($q) => $q->where('name', $tagName))->get();
+        } else {
+            $posts = Post::with('tags')->withCount('comments')->get();
+        }
+
         return view('posts.index', compact('posts'));
     }
     
@@ -17,8 +24,4 @@ class PostController extends Controller
         return view('posts.show', compact('post'));
     }
 
-    public function searchByTag($tagName) {
-    $posts = Post::whereHas('tags', fn($q) => $q->where('name', $tagName))->get();
-    return view('posts.index', compact('posts'));
-    }
 }
