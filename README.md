@@ -1,3 +1,22 @@
+# [9-5-5:ハンズオン　リレーションを使ったブログシステム]
+
+これは、Laravel で作成した学習用アプリケーションです。
+投稿一覧ページと投稿詳細ページを表示し、投稿一覧ではタグで投稿を絞り込めるようにしています。
+
+## 🌟 今回の学習ポイント
+
+- モデルとマイグレーションを作成。中間テーブルがあるため作成順序に注意。
+- データはTinkerで作成。
+- 投稿とコメントは1対多、投稿とタグは多対多。
+- Eager Loading方式でタグを絞り込めるようにする。
+
+## 📘 反省ポイント
+
+- Eager Loadingのコードを書く位置を下の方にしてしまったため、タグを絞り込むことに苦戦。
+- 絞り込むための `if` や `whereHas` の使い方が難しく感じたので練習が必要。
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
