@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # [9-5-5:ハンズオン　リレーションを使ったブログシステム]
 
 これは、Laravel で作成した学習用アプリケーションです。
@@ -15,6 +16,7 @@
 
 - Eager Loadingのコードを書く位置を下の方にしてしまったため、タグを絞り込むことに苦戦。
 - 絞り込むための `if` や `whereHas` の使い方が難しく感じたので練習が必要。
+- `create` を使ったのにモデルに `fillable` がない。セットで使用することを覚えておく。
 
 ---
 
@@ -83,8 +85,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
+# The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 # relation-app-practice
+
 9-5-5ハンズオン作成記録
->>>>>>> 172732ffcd7aa7b09172f5eba224ea91447b7dfe
+
+> > > > > > > 172732ffcd7aa7b09172f5eba224ea91447b7dfe
